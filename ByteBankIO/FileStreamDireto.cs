@@ -2,7 +2,7 @@
 
 partial class Program
 {
-    static void FileStream()
+    static void FileStreamDireto()
     {
         string nomeArquivo = "contas.txt";
         var numeroDeBytesLidos = -1;
@@ -23,9 +23,6 @@ partial class Program
             fluxoDoArquivo.Close();
 
         };
-
-
-
 
         Console.ReadLine();
     }
