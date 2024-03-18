@@ -1,10 +1,15 @@
 ﻿using ByteBankIO;
-using System.Text;
 
 partial class Program
 {
     static void Main()
     {
+        TestaEscrita();
+
+        Console.ReadLine();
+
+
+        /*
         var enderecoArquivo = "contas.txt";
 
         using(var fluxoArquivo = new FileStream(enderecoArquivo, FileMode.Open))
@@ -19,7 +24,7 @@ partial class Program
                 var linha = leitor.ReadLine();
                 var contaCorrente = ConverterStringParaContaCorrente(linha);
 
-                var msg = $"{contaCorrente.Titular.Nome}Conta numero: {contaCorrente.Numero}, Agencia: {contaCorrente.Agencia}, Saldo: {contaCorrente.Saldo}";
+                var msg = $"{contaCorrente.Titular.Nome}, Conta numero: {contaCorrente.Numero}, Agencia: {contaCorrente.Agencia}, Saldo: {contaCorrente.Saldo}";
                 Console.WriteLine(msg);
             }
 
@@ -27,6 +32,8 @@ partial class Program
 
 
         Console.ReadLine();
+    */
+
     }
     static ContaCorrente ConverterStringParaContaCorrente(string linha)
     {
@@ -36,10 +43,10 @@ partial class Program
 
         var agencia = campos[0];
         var numero = campos[1];
-        var saldo = campos[2];
+        var saldo = campos[2].Replace(".", ",");
         var nomeTitular = campos[3];
-        
-        
+
+
         var agenciaComInt = int.Parse(agencia);
         var numeroComInt = int.Parse(numero);
         var saldoComDouble = double.Parse(saldo);
