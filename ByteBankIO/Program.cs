@@ -5,6 +5,9 @@ partial class Program
     static void Main()
     {
         EscritaBinaria();
+        LeituraBinaria();
+
+        Console.WriteLine("aplicacao finalizada");
 
         Console.ReadLine();
 
