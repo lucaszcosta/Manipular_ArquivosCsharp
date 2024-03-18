@@ -4,7 +4,7 @@ partial class Program
 {
     static void Main()
     {
-        TestaEscrita();
+        EscritaBinaria();
 
         Console.ReadLine();
 
